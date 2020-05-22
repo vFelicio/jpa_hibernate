@@ -76,19 +76,12 @@ public class Previsao {
 	public void setLongitude(Double longitude) {
 		this.longitude = longitude;
 	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((data == null) ? 0 : data.hashCode());
-		result = prime * result + ((descricao == null) ? 0 : descricao.hashCode());
-		result = prime * result + ((diasemana == null) ? 0 : diasemana.hashCode());
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
-		result = prime * result + ((latitude == null) ? 0 : latitude.hashCode());
-		result = prime * result + ((longitude == null) ? 0 : longitude.hashCode());
-		result = prime * result + ((tempMax == null) ? 0 : tempMax.hashCode());
-		result = prime * result + ((tempMin == null) ? 0 : tempMin.hashCode());
-		result = prime * result + ((umidade == null) ? 0 : umidade.hashCode());
 		return result;
 	}
 	@Override
@@ -100,50 +93,10 @@ public class Previsao {
 		if (getClass() != obj.getClass())
 			return false;
 		Previsao other = (Previsao) obj;
-		if (data == null) {
-			if (other.data != null)
-				return false;
-		} else if (!data.equals(other.data))
-			return false;
-		if (descricao == null) {
-			if (other.descricao != null)
-				return false;
-		} else if (!descricao.equals(other.descricao))
-			return false;
-		if (diasemana == null) {
-			if (other.diasemana != null)
-				return false;
-		} else if (!diasemana.equals(other.diasemana))
-			return false;
 		if (id == null) {
 			if (other.id != null)
 				return false;
 		} else if (!id.equals(other.id))
-			return false;
-		if (latitude == null) {
-			if (other.latitude != null)
-				return false;
-		} else if (!latitude.equals(other.latitude))
-			return false;
-		if (longitude == null) {
-			if (other.longitude != null)
-				return false;
-		} else if (!longitude.equals(other.longitude))
-			return false;
-		if (tempMax == null) {
-			if (other.tempMax != null)
-				return false;
-		} else if (!tempMax.equals(other.tempMax))
-			return false;
-		if (tempMin == null) {
-			if (other.tempMin != null)
-				return false;
-		} else if (!tempMin.equals(other.tempMin))
-			return false;
-		if (umidade == null) {
-			if (other.umidade != null)
-				return false;
-		} else if (!umidade.equals(other.umidade))
 			return false;
 		return true;
 	}

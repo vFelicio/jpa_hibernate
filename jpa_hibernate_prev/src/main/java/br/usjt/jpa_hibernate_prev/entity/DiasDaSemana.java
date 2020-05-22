@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -13,6 +15,9 @@ public class DiasDaSemana {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 	private String diasemana;
+	@OneToOne(optional=false)
+	@JoinColumn(name="id_da_minha_previsao")
+	private Previsao previsao;
 	public Long getId() {
 		return id;
 	}
@@ -29,7 +34,6 @@ public class DiasDaSemana {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((diasemana == null) ? 0 : diasemana.hashCode());
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		return result;
 	}
@@ -42,11 +46,6 @@ public class DiasDaSemana {
 		if (getClass() != obj.getClass())
 			return false;
 		DiasDaSemana other = (DiasDaSemana) obj;
-		if (diasemana == null) {
-			if (other.diasemana != null)
-				return false;
-		} else if (!diasemana.equals(other.diasemana))
-			return false;
 		if (id == null) {
 			if (other.id != null)
 				return false;
@@ -56,8 +55,9 @@ public class DiasDaSemana {
 	}
 	@Override
 	public String toString() {
-		return "DiasDaSemana [id=" + id + ", diasemana=" + diasemana + "]";
+		return "DiasDaSemana [id=" + id + ", diasemana=" + diasemana + ", previsao=" + previsao + "]";
 	}
+
 	
 	
 
