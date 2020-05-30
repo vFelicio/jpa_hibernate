@@ -19,8 +19,6 @@ public class Previsao {
 	private Double umidade;
 	private String descricao;
 	private String data;
-	private Double latitude;
-	private Double longitude;
 	
 	public Long getId() {
 		return id;
@@ -64,18 +62,6 @@ public class Previsao {
 	public void setData(String data) {
 		this.data = data;
 	}
-	public Double getLatitude() {
-		return latitude;
-	}
-	public void setLatitude(Double latitude) {
-		this.latitude = latitude;
-	}
-	public Double getLongitude() {
-		return longitude;
-	}
-	public void setLongitude(Double longitude) {
-		this.longitude = longitude;
-	}
 
 	@Override
 	public int hashCode() {
@@ -103,8 +89,8 @@ public class Previsao {
 	@Override
 	public String toString() {
 		return "Previsao [id=" + id + ", diasemana=" + diasemana + ", tempMin=" + tempMin + ", tempMax=" + tempMax
-				+ ", umidade=" + umidade + ", descricao=" + descricao + ", data=" + data + ", latitude=" + latitude
-				+ ", longitude=" + longitude + "]";
+				+ ", umidade=" + umidade + ", descricao=" + descricao + ", data=" + data + "]";
 	}
+
 
 }
