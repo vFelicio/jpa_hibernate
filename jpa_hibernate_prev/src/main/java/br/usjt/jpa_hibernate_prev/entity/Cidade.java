@@ -42,6 +42,12 @@ public class Cidade {
 	public void setLongitude(Double longitude) {
 		this.longitude = longitude;
 	}
+	public Previsao getPrevisao() {
+		return previsao;
+	}
+	public void setPrevisao(Previsao previsao) {
+		this.previsao = previsao;
+	}
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -67,8 +73,10 @@ public class Cidade {
 	}
 	@Override
 	public String toString() {
-		return "Cidade [id=" + id + ", nome=" + nome + ", latitude=" + latitude + ", longitude=" + longitude + "]";
+		return "Cidade [id=" + id + ", nome=" + nome + ", latitude=" + latitude + ", longitude=" + longitude
+				+ ", previsao=" + previsao + "]";
 	}
+
 	
 	
 	
